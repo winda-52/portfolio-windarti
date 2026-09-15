@@ -11,20 +11,17 @@
 
 <body class="bg-blue-50 text-slate-800">
 
-  <!-- ================= NAVBAR ================= -->
   <nav class="sticky top-0 z-50 bg-white border-b border-blue-100">
 
     <div class="max-w-6xl mx-auto px-6 py-5
                 flex items-center justify-between">
 
-      <!-- Logo -->
       <a href="index.html"
          class="text-2xl font-bold text-blue-600">
         Winda<span class="text-slate-800">.</span>
       </a>
 
 
-      <!-- Menu -->
       <div class="hidden md:flex items-center gap-8 font-medium">
 
         <a href="index.html"
@@ -55,7 +52,6 @@
       </div>
 
 
-      <!-- Tombol Contact -->
       <a href="contact.html"
          class="hidden md:block
                 bg-blue-600
@@ -76,7 +72,6 @@
 
 
 
-  <!-- ================= TODO LIST ================= -->
   <main class="min-h-screen px-6 py-16">
 
     <div class="max-w-2xl mx-auto">
@@ -117,7 +112,6 @@
 
 
 
-      <!-- ================= CARD ================= -->
       <div class="bg-white
                   rounded-3xl
                   shadow-xl
@@ -125,7 +119,6 @@
                   p-6 md:p-8">
 
 
-        <!-- INPUT -->
         <div class="flex flex-col sm:flex-row gap-3 mb-7">
 
           <input
@@ -164,7 +157,6 @@
 
 
 
-        <!-- JUDUL DAFTAR -->
         <div class="flex items-center
                     justify-between
                     mb-5">
@@ -190,7 +182,6 @@
 
 
 
-        <!-- DAFTAR TUGAS -->
         <ul
           id="taskList"
           class="space-y-3">
@@ -198,7 +189,6 @@
 
 
 
-        <!-- PESAN KOSONG -->
         <p
           id="emptyMessage"
           class="text-center
@@ -218,7 +208,6 @@
 
 
 
-  <!-- ================= JAVASCRIPT ================= -->
   <script>
 
     // Mengambil elemen HTML
@@ -239,7 +228,6 @@
 
 
 
-    // ================= TAMBAH TUGAS =================
 
     function addTask() {
 
@@ -315,7 +303,6 @@
 
 
 
-      // ================= CHECKBOX =================
 
       const checkbox =
         li.querySelector(".task-checkbox");
@@ -390,8 +377,6 @@
 
 
 
-      // ================= HAPUS TUGAS =================
-
       deleteButton.addEventListener(
         "click",
         function () {
@@ -438,7 +423,6 @@
 
 
 
-    // ================= JUMLAH TUGAS =================
 
     function updateTaskCount() {
 
@@ -469,7 +453,6 @@
 
 
 
-    // ================= TOMBOL TAMBAH =================
 
     addButton.addEventListener(
       "click",
@@ -478,7 +461,6 @@
 
 
 
-    // ================= TOMBOL ENTER =================
 
     taskInput.addEventListener(
       "keydown",
@@ -495,7 +477,6 @@
 
 
 
-    // Jalankan pertama kali
     updateTaskCount();
 
   </script>
