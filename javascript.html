@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>To-Do List | Windarti Setianingrum</title>
+
+  <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body class="bg-blue-50 text-slate-800">
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="sticky top-0 z-50 bg-white border-b border-blue-100">
+
+    <div class="max-w-6xl mx-auto px-6 py-5
+                flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="index.html"
+         class="text-2xl font-bold text-blue-600">
+        Winda<span class="text-slate-800">.</span>
+      </a>
+
+
+      <!-- Menu -->
+      <div class="hidden md:flex items-center gap-8 font-medium">
+
+        <a href="index.html"
+           class="hover:text-blue-600 transition">
+          Home
+        </a>
+
+        <a href="about.html"
+           class="hover:text-blue-600 transition">
+          About
+        </a>
+
+        <a href="projects.html"
+           class="hover:text-blue-600 transition">
+          Projects
+        </a>
+
+        <a href="javascript.html"
+           class="text-blue-600">
+          JavaScript
+        </a>
+
+        <a href="contact.html"
+           class="hover:text-blue-600 transition">
+          Contact
+        </a>
+
+      </div>
+
+
+      <!-- Tombol Contact -->
+      <a href="contact.html"
+         class="hidden md:block
+                bg-blue-600
+                text-white
+                px-6 py-3
+                rounded-full
+                font-semibold
+                hover:bg-blue-700
+                transition">
+
+        Hubungi Saya
+
+      </a>
+
+    </div>
+
+  </nav>
+
+
+
+  <!-- ================= TODO LIST ================= -->
+  <main class="min-h-screen px-6 py-16">
+
+    <div class="max-w-2xl mx-auto">
+
+
+      <!-- JUDUL -->
+      <div class="text-center mb-10">
+
+        <p class="text-blue-600
+                  font-semibold
+                  tracking-widest
+                  mb-3">
+
+          TUGAS JAVASCRIPT
+
+        </p>
+
+
+        <h1 class="text-4xl md:text-5xl
+                   font-bold
+                   text-slate-900
+                   mb-4">
+
+          To-Do List
+
+        </h1>
+
+
+        <p class="text-slate-500
+                  text-lg">
+
+          Aplikasi sederhana untuk mencatat
+          dan mengelola tugas.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- ================= CARD ================= -->
+      <div class="bg-white
+                  rounded-3xl
+                  shadow-xl
+                  border border-blue-100
+                  p-6 md:p-8">
+
+
+        <!-- INPUT -->
+        <div class="flex flex-col sm:flex-row gap-3 mb-7">
+
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="Masukkan tugas..."
+            class="flex-1
+                   px-5 py-3
+                   rounded-xl
+                   border border-slate-200
+                   text-base
+                   focus:outline-none
+                   focus:ring-2
+                   focus:ring-blue-500
+                   focus:border-blue-500"
+          >
+
+
+          <button
+            type="button"
+            id="addButton"
+            class="bg-blue-600
+                   text-white
+                   px-7 py-3
+                   rounded-xl
+                   font-semibold
+                   hover:bg-blue-700
+                   hover:-translate-y-0.5
+                   transition">
+
+            Tambah
+
+          </button>
+
+        </div>
+
+
+
+        <!-- JUDUL DAFTAR -->
+        <div class="flex items-center
+                    justify-between
+                    mb-5">
+
+          <h2 class="font-bold text-xl">
+            Daftar Tugas
+          </h2>
+
+
+          <span
+            id="taskCount"
+            class="text-sm
+                   text-blue-600
+                   bg-blue-50
+                   px-3 py-1
+                   rounded-full">
+
+            0 tugas
+
+          </span>
+
+        </div>
+
+
+
+        <!-- DAFTAR TUGAS -->
+        <ul
+          id="taskList"
+          class="space-y-3">
+        </ul>
+
+
+
+        <!-- PESAN KOSONG -->
+        <p
+          id="emptyMessage"
+          class="text-center
+                 text-slate-400
+                 py-8">
+
+          Belum ada tugas.
+          Yuk tambahkan tugas! ✨
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+
+    // Mengambil elemen HTML
+    const taskInput =
+      document.getElementById("taskInput");
+
+    const addButton =
+      document.getElementById("addButton");
+
+    const taskList =
+      document.getElementById("taskList");
+
+    const taskCount =
+      document.getElementById("taskCount");
+
+    const emptyMessage =
+      document.getElementById("emptyMessage");
+
+
+
+    // ================= TAMBAH TUGAS =================
+
+    function addTask() {
+
+      const taskText =
+        taskInput.value.trim();
+
+
+      // Jika input kosong
+      if (taskText === "") {
+
+        alert(
+          "Silakan masukkan tugas terlebih dahulu!"
+        );
+
+        taskInput.focus();
+
+        return;
+      }
+
+
+
+      // Membuat elemen <li>
+      const li =
+        document.createElement("li");
+
+
+      li.className =
+        "flex items-center justify-between gap-3 " +
+        "bg-blue-50 border border-blue-200 " +
+        "rounded-xl px-4 py-3";
+
+
+
+      // Isi tugas
+      li.innerHTML = `
+
+        <div class="flex items-center gap-3 min-w-0">
+
+          <input
+            type="checkbox"
+            class="task-checkbox
+                   w-5 h-5
+                   accent-blue-600
+                   cursor-pointer"
+          >
+
+          <span
+            class="task-text
+                   text-slate-700
+                   break-words">
+
+            ${taskText}
+
+          </span>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="delete-button
+                 text-slate-300
+                 cursor-not-allowed
+                 font-semibold
+                 whitespace-nowrap"
+          disabled>
+
+          Hapus
+
+        </button>
+
+      `;
+
+
+
+      // ================= CHECKBOX =================
+
+      const checkbox =
+        li.querySelector(".task-checkbox");
+
+      const deleteButton =
+        li.querySelector(".delete-button");
+
+      const taskTextElement =
+        li.querySelector(".task-text");
+
+
+
+      checkbox.addEventListener(
+        "change",
+        function () {
+
+          if (this.checked) {
+
+            // Tugas selesai
+            taskTextElement.classList.add(
+              "line-through",
+              "text-slate-400"
+            );
+
+
+            // Aktifkan tombol hapus
+            deleteButton.disabled = false;
+
+
+            deleteButton.classList.remove(
+              "text-slate-300",
+              "cursor-not-allowed"
+            );
+
+
+            deleteButton.classList.add(
+              "text-red-500",
+              "hover:text-red-700",
+              "cursor-pointer"
+            );
+
+
+          } else {
+
+            // Tugas belum selesai
+            taskTextElement.classList.remove(
+              "line-through",
+              "text-slate-400"
+            );
+
+
+            // Matikan tombol hapus
+            deleteButton.disabled = true;
+
+
+            deleteButton.classList.remove(
+              "text-red-500",
+              "hover:text-red-700",
+              "cursor-pointer"
+            );
+
+
+            deleteButton.classList.add(
+              "text-slate-300",
+              "cursor-not-allowed"
+            );
+
+          }
+
+        }
+      );
+
+
+
+      // ================= HAPUS TUGAS =================
+
+      deleteButton.addEventListener(
+        "click",
+        function () {
+
+          // Pengaman
+          if (!checkbox.checked) {
+
+            alert(
+              "Tugas belum selesai, jadi belum bisa dihapus!"
+            );
+
+            return;
+          }
+
+
+          // Hapus tugas
+          li.remove();
+
+
+          // Update jumlah
+          updateTaskCount();
+
+        }
+      );
+
+
+
+      // Masukkan tugas ke daftar
+      taskList.appendChild(li);
+
+
+      // Kosongkan input
+      taskInput.value = "";
+
+
+      // Update jumlah tugas
+      updateTaskCount();
+
+
+      // Kembali fokus ke input
+      taskInput.focus();
+
+    }
+
+
+
+    // ================= JUMLAH TUGAS =================
+
+    function updateTaskCount() {
+
+      const total =
+        taskList.children.length;
+
+
+      taskCount.textContent =
+        total + " tugas";
+
+
+      // Jika belum ada tugas
+      if (total === 0) {
+
+        emptyMessage.classList.remove(
+          "hidden"
+        );
+
+      } else {
+
+        emptyMessage.classList.add(
+          "hidden"
+        );
+
+      }
+
+    }
+
+
+
+    // ================= TOMBOL TAMBAH =================
+
+    addButton.addEventListener(
+      "click",
+      addTask
+    );
+
+
+
+    // ================= TOMBOL ENTER =================
+
+    taskInput.addEventListener(
+      "keydown",
+      function (event) {
+
+        if (event.key === "Enter") {
+
+          addTask();
+
+        }
+
+      }
+    );
+
+
+
+    // Jalankan pertama kali
+    updateTaskCount();
+
+  </script>
+
+</body>
+</html>
