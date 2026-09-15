@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Windarti Setianingrum | Portfolio</title>
+
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body class="bg-white text-slate-800">
+
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="sticky top-0 z-50 bg-white border-b border-blue-100">
+
+    <div class="max-w-6xl mx-auto px-6 py-4
+                flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="index.html"
+         class="text-2xl font-bold text-blue-600">
+        Winda<span class="text-slate-800">.</span>
+      </a>
+
+
+      <!-- Menu -->
+      <div class="hidden md:flex items-center gap-8 font-medium">
+
+        <a href="index.html"
+           class="text-blue-600">
+          Home
+        </a>
+
+        <a href="about.html"
+           class="hover:text-blue-600 transition">
+          About
+        </a>
+
+        <a href="projects.html"
+           class="hover:text-blue-600 transition">
+          Projects
+        </a>
+
+        <a href="contact.html"
+           class="hover:text-blue-600 transition">
+          Contact
+        </a>
+
+      </div>
+
+
+      <!-- Tombol Contact -->
+      <a href="contact.html"
+         class="bg-blue-600 text-white
+                px-6 py-2.5 rounded-full
+                font-medium
+                hover:bg-blue-700 transition">
+        Hubungi Saya
+      </a>
+
+    </div>
+
+  </nav>
+
+
+
+  <!-- ================= HERO ================= -->
+  <section class="bg-blue-50">
+
+    <div class="max-w-6xl mx-auto px-6 py-20 md:py-28">
+
+      <div class="grid md:grid-cols-2
+                  gap-14 items-center">
+
+
+        <!-- ================= BAGIAN KIRI ================= -->
+        <div>
+
+          <p class="text-blue-600
+                    font-semibold
+                    tracking-widest
+                    mb-4">
+            HALO, SAYA 👋
+          </p>
+
+
+          <h1 class="text-5xl md:text-6xl
+                     font-bold
+                     leading-tight
+                     mb-6">
+
+            Windarti
+            <span class="text-blue-600">
+              Setianingrum
+            </span>
+
+          </h1>
+
+
+          <p class="text-lg
+                    text-slate-600
+                    leading-relaxed
+                    max-w-xl
+                    mb-8">
+
+            Saya adalah mahasiswa yang sedang belajar
+            dan mengembangkan kemampuan di bidang
+            teknologi, desain, dan pengembangan website.
+
+          </p>
+
+
+          <p class="text-slate-500
+                    leading-relaxed
+                    max-w-xl
+                    mb-8">
+
+            Saya senang mencoba hal-hal baru dan
+            mendapatkan pengalaman melalui berbagai
+            tugas dan project perkuliahan.
+
+          </p>
+
+
+          <!-- Tombol -->
+          <div class="flex flex-wrap gap-4">
+
+            <a href="projects.html"
+               class="bg-blue-600
+                      text-white
+                      px-7 py-3
+                      rounded-full
+                      font-semibold
+                      hover:bg-blue-700
+                      transition">
+
+              Lihat Project →
+
+            </a>
+
+
+            <a href="about.html"
+               class="border
+                      border-blue-600
+                      text-blue-600
+                      px-7 py-3
+                      rounded-full
+                      font-semibold
+                      hover:bg-blue-100
+                      transition">
+
+              Tentang Saya
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ================= FOTO ================= -->
+        <div class="flex justify-center">
+
+          <div class="relative">
+
+
+            <!-- Hiasan belakang foto -->
+            <div class="absolute
+                        -inset-3
+                        bg-blue-200
+                        rounded-[32px]
+                        rotate-3">
+            </div>
+
+
+            <!-- Kotak foto -->
+            <div class="relative
+                        w-72 h-80
+                        md:w-80 md:h-[420px]
+                        bg-white
+                        p-3
+                        rounded-[30px]
+                        shadow-xl">
+
+              <img
+                src="assets/foto-winda.png"
+                alt="Windarti Setianingrum"
+                class="w-full
+                       h-full
+                       object-cover
+                       rounded-[22px]"
+              >
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= PROJECT ================= -->
+  <section class="bg-white py-20">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+
+      <!-- Judul -->
+      <div class="text-center mb-12">
+
+        <p class="text-blue-600
+                  font-semibold
+                  tracking-widest
+                  mb-3">
+          PROJECT
+        </p>
+
+
+        <h2 class="text-3xl md:text-4xl
+                   font-bold
+                   mb-4">
+          Project yang Pernah Saya Kerjakan
+        </h2>
+
+
+        <p class="text-slate-500">
+          Beberapa project yang saya kerjakan
+          selama perkuliahan.
+        </p>
+
+      </div>
+
+
+
+      <!-- ================= PROJECT CARDS ================= -->
+      <div class="grid md:grid-cols-3 gap-6">
+
+
+        <!-- PROJECT 1 : WASHGO -->
+        <div class="bg-white
+                    rounded-2xl
+                    overflow-hidden
+                    border border-blue-100
+                    shadow-sm
+                    hover:-translate-y-1
+                    hover:shadow-xl
+                    transition">
+
+
+          <!-- Gambar -->
+          <div class="h-48 bg-slate-100">
+
+            <img
+              src="assets/washgo.png"
+              alt="Desain UI UX aplikasi WashGo"
+              class="w-full
+                     h-full
+                     object-cover"
+            >
+
+          </div>
+
+
+          <!-- Isi -->
+          <div class="p-6">
+
+            <h3 class="text-xl
+                       font-bold
+                       mb-3">
+
+              Desain UI/UX Aplikasi WashGo
+
+            </h3>
+
+
+            <p class="text-slate-500
+                      text-sm
+                      leading-relaxed
+                      mb-4">
+
+              Merancang desain antarmuka aplikasi
+              layanan laundry yang ditujukan
+              untuk mahasiswa.
+
+            </p>
+
+
+            <p class="text-blue-600
+                      text-sm
+                      font-medium">
+
+              Interaksi Manusia dan Komputer
+
+            </p>
+
+
+            <p class="text-slate-500
+                      text-sm
+                      mt-1">
+
+              Tools: Figma
+
+            </p>
+
+
+            <p class="text-slate-500
+                      text-sm">
+
+              Kerja Kelompok - UI/UX Design
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- PROJECT 2 : KEAMANAN KOMPUTER -->
+        <div class="bg-white
+                    rounded-2xl
+                    overflow-hidden
+                    border border-blue-100
+                    shadow-sm
+                    hover:-translate-y-1
+                    hover:shadow-xl
+                    transition">
+
+
+          <!-- Gambar -->
+          <div class="h-48 bg-slate-100">
+
+            <img
+              src="assets/jarkom.png"
+              alt="Topologi jaringan komputer"
+              class="w-full
+                     h-full
+                     object-cover"
+            >
+
+          </div>
+
+
+          <!-- Isi -->
+          <div class="p-6">
+
+            <h3 class="text-xl
+                       font-bold
+                       mb-3">
+
+              Tugas UAS Keamanan Komputer
+
+            </h3>
+
+
+            <p class="text-slate-500
+                      text-sm
+                      leading-relaxed
+                      mb-4">
+
+              Merancang topologi jaringan komputer
+              menggunakan Cisco Packet Tracer
+              sebagai tugas UAS.
+
+            </p>
+
+
+            <p class="text-blue-600
+                      text-sm
+                      font-medium">
+
+              Keamanan Komputer
+
+            </p>
+
+
+            <p class="text-slate-500
+                      text-sm
+                      mt-1">
+
+              Tools: Cisco Packet Tracer
+
+            </p>
+
+
+            <p class="text-slate-500
+                      text-sm">
+
+              Tugas UAS - Kerja Kelompok
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- PROJECT 3 : WEBSITE -->
+        <div class="bg-white
+                    rounded-2xl
+                    overflow-hidden
+                    border border-blue-100
+                    shadow-sm
+                    hover:-translate-y-1
+                    hover:shadow-xl
+                    transition">
+
+
+          <!-- Bagian gambar -->
+          <div class="h-48
+                      bg-blue-100
+                      flex
+                      items-center
+                      justify-center">
+
+            <div class="text-center">
+
+              <div class="text-5xl mb-3">
+                💻
+              </div>
+
+              <p class="text-blue-600
+                        font-semibold">
+
+                Website Profil
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- Isi -->
+          <div class="p-6">
+
+            <h3 class="text-xl
+                       font-bold
+                       mb-3">
+
+              Website Profil Pribadi
+
+            </h3>
+
+
+            <p class="text-slate-500
+                      text-sm
+                      leading-relaxed
+                      mb-4">
+
+              Membuat website profil pribadi
+              yang berisi informasi diri,
+              pendidikan, dan portofolio.
+
+            </p>
+
+
+            <p class="text-blue-600
+                      text-sm
+                      font-medium">
+
+              Tugas Perkuliahan
+
+            </p>
+
+
+            <p class="text-slate-500
+                      text-sm
+                      mt-1">
+
+              Tools: HTML, CSS, GitHub
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Tombol Semua Project -->
+      <div class="text-center mt-10">
+
+        <a href="projects.html"
+           class="inline-block
+                  border
+                  border-blue-600
+                  text-blue-600
+                  px-7 py-3
+                  rounded-full
+                  font-semibold
+                  hover:bg-blue-600
+                  hover:text-white
+                  transition">
+
+          Lihat Semua Project →
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= CONTACT ================= -->
+  <section class="bg-blue-600 py-20">
+
+    <div class="max-w-5xl mx-auto px-6">
+
+      <div class="text-center text-white">
+
+        <p class="text-blue-200
+                  font-semibold
+                  tracking-widest
+                  mb-4">
+
+          TERIMA KASIH SUDAH BERKUNJUNG
+
+        </p>
+
+
+        <h2 class="text-3xl md:text-4xl
+                   font-bold
+                   mb-5">
+
+          Mari Terhubung!
+
+        </h2>
+
+
+        <p class="text-blue-100
+                  max-w-2xl
+                  mx-auto
+                  leading-relaxed
+                  mb-8">
+
+          Jika ingin berdiskusi atau berkolaborasi
+          dalam sebuah project, jangan ragu untuk
+          menghubungi saya.
+
+        </p>
+
+
+        <a href="contact.html"
+           class="inline-block
+                  bg-white
+                  text-blue-600
+                  px-8 py-3
+                  rounded-full
+                  font-semibold
+                  hover:bg-blue-50
+                  transition">
+
+          Hubungi Saya
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-white
+                 border-t
+                 border-blue-100
+                 py-7">
+
+    <div class="max-w-6xl
+                mx-auto
+                px-6
+                text-center">
+
+      <p class="text-slate-500
+                text-sm">
+
+        © 2026 Windarti Setianingrum
+
+      </p>
+
+    </div>
+
+  </footer>
+
+
+</body>
+</html>
