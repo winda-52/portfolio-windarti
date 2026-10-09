@@ -11,6 +11,7 @@
 
 <body class="bg-[#f8fbff] text-slate-800">
 
+  <!-- NAVBAR -->
   <nav class="bg-white shadow-sm sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
@@ -18,7 +19,6 @@
          class="text-2xl font-bold text-blue-600">
         Winda.
       </a>
-
 
       <div class="hidden md:flex items-center gap-7 font-medium">
 
@@ -47,10 +47,12 @@
   </nav>
 
 
+  <!-- PROJECTS SECTION -->
   <section class="py-20">
 
     <div class="max-w-6xl mx-auto px-6">
 
+      <!-- JUDUL -->
       <div class="text-center mb-14">
 
         <p class="text-blue-600 font-semibold tracking-widest mb-3">
@@ -69,9 +71,11 @@
       </div>
 
 
-      <div class="grid md:grid-cols-3 gap-8">
+      <!-- GRID PROJECT -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
 
+        <!-- PROJECT 1: WASHGO -->
         <div class="bg-white rounded-2xl overflow-hidden
                     shadow-md hover:shadow-xl
                     transition duration-300
@@ -87,7 +91,6 @@
             >
 
           </div>
-
 
           <div class="p-6">
 
@@ -134,6 +137,7 @@
         </div>
 
 
+        <!-- PROJECT 2: JARINGAN KOMPUTER -->
         <div class="bg-white rounded-2xl overflow-hidden
                     shadow-md hover:shadow-xl
                     transition duration-300
@@ -149,7 +153,6 @@
             >
 
           </div>
-
 
           <div class="p-6">
 
@@ -196,6 +199,7 @@
         </div>
 
 
+        <!-- PROJECT 3: WEBSITE PROFIL -->
         <div class="bg-white rounded-2xl overflow-hidden
                     shadow-md hover:shadow-xl
                     transition duration-300
@@ -203,15 +207,14 @@
 
           <div class="h-56 bg-blue-50 overflow-hidden">
 
-  <img
-    src="assets/website-profil.png"
-    alt="Website Profil Pribadi Windarti"
-    class="w-full h-full object-cover
-           hover:scale-105 transition duration-300"
-  >
+            <img
+              src="assets/website-profil.png"
+              alt="Website Profil Pribadi Windarti"
+              class="w-full h-full object-cover
+                     hover:scale-105 transition duration-300"
+            >
 
-</div>
-
+          </div>
 
           <div class="p-6">
 
@@ -258,12 +261,90 @@
         </div>
 
 
+        <!-- PROJECT 4: KANTINKU -->
+        <div class="bg-white rounded-2xl overflow-hidden
+                    shadow-md hover:shadow-xl
+                    transition duration-300
+                    border border-blue-100">
+
+          <div class="h-56 bg-blue-50 overflow-hidden">
+
+            <a href="https://winda-52.github.io/KantinKu/"
+               target="_blank"
+               rel="noopener noreferrer">
+
+              <img
+                src="assets/kantinku.png"
+                alt="Preview aplikasi KantinKu"
+                class="w-full h-full object-cover
+                       hover:scale-105 transition duration-300"
+              >
+
+            </a>
+
+          </div>
+
+          <div class="p-6">
+
+            <span class="inline-block bg-blue-50 text-blue-600
+                         text-sm px-3 py-1 rounded-full mb-4">
+              Teknologi Web
+            </span>
+
+            <h2 class="text-xl font-bold text-slate-900 mb-3">
+              KantinKu — E-Commerce
+            </h2>
+
+            <p class="text-slate-500 leading-relaxed mb-5">
+              Mengembangkan aplikasi pemesanan makanan dan minuman
+              berbasis web menggunakan React, dengan fitur detail
+              menu, keranjang, checkout, rating, dan ulasan.
+            </p>
+
+            <div class="space-y-2 text-sm mb-5">
+
+              <p>
+                <span class="font-semibold text-blue-600">
+                  Mata Kuliah:
+                </span>
+                Teknologi Web
+              </p>
+
+              <p>
+                <span class="font-semibold text-blue-600">
+                  Tools:
+                </span>
+                React, JavaScript, Tailwind CSS, GitHub Pages
+              </p>
+
+              <p>
+                <span class="font-semibold text-blue-600">
+                  Jenis:
+                </span>
+                Tugas Perkuliahan - E-Commerce
+              </p>
+
+            </div>
+
+            <a href="https://winda-52.github.io/KantinKu/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-block bg-blue-600 text-white
+                      px-5 py-2 rounded-xl font-semibold
+                      hover:bg-blue-700 transition">
+              Lihat Project →
+            </a>
+
+          </div>
+        </div>
+
+
       </div>
     </div>
   </section>
 
 
-
+  <!-- PENUTUP -->
   <section class="bg-blue-600 text-white py-20">
 
     <div class="max-w-3xl mx-auto px-6 text-center">
@@ -293,7 +374,7 @@
   </section>
 
 
-
+  <!-- FOOTER -->
   <footer class="bg-white py-7">
 
     <p class="text-center text-slate-500">
@@ -301,7 +382,6 @@
     </p>
 
   </footer>
-
 
 </body>
 </html>
